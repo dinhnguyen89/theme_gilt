@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/custom.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/jquery.bxslider.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.bxslider.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/common.js</name></action>
+
+        </reference>
+        <catalog_category_default>
+            <reference name="product_list">
+                <block type="cms/block" name="footer-logo-contact"><action method="setBlockId"><block_id>footer-logo-contact</block_id></action></block>
+            </reference>
+        </catalog_category_default>
+
+        <reference name="footer">
+            <block type="cms/block" name="cms_footer_customer_logo_contact" before="footer-hidden1">
+                <action method="setBlockId">
+                    <block_id>footer-logo-contact</block_id>
+                </action>
+            </block>
+            <block type="cms/block" name="cms_footer_customer_care_contact" after="footer-hidden">
+                <action method="setBlockId">
+                    <block_id>footer-customer-contact</block_id>
+                </action>
+            </block>
+            <block type="cms/block" name="cms_footer-customer-sevices" after="footer-hidden">
+                <action method="setBlockId">
+                    <block_id>footer-customer-sevices</block_id>
+                </action>
+            </block>
+            <block type="cms/block" name="cms_footer-policies-contact" after="footer-hidden">
+                <action method="setBlockId">
+                    <block_id>footer-policies-contact</block_id>
+                </action>
+            </block>
+            <block type="cms/block" name="cms_footer_social_network_hidden" after="newsletter">
+                <action method="setBlockId">
+                    <block_id>footer-social-networks</block_id>
+                </action>
+            </block>
+
+            <block type="cms/block" name="cms_footer-magazine-contact" after="cms-footer-magazine">
+                <action method="setBlockId">
+                    <block_id>footer-magazine-contact</block_id>
+                </action>
+            </block>
+
+            <remove name="cms_footer_links"></remove>
+            <remove name="cms_footer_links_sm"></remove>
+            <remove name="footer_links"></remove>
+            <remove name="footer_links2"></remove>
+        </reference>
+
+    </default>
+
+</layout>
